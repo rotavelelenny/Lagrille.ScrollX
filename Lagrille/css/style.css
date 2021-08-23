@@ -1,0 +1,315 @@
+        
+            /* COMPOSITION GLOBAL  */
+
+        /**** Part 0 - INTRO  ****/
+        /* PAGE 0 */
+        /**** Part 1 - SUMMARY  ****/
+        /* PAGE 1 */
+        /**** Part 2 - IMG  ****/
+        /* PAGE 2 */
+        /**** Part 3 - AUDIO  ****/
+        /* PAGE 3 */
+        /**** Part 4 - CONTACT  ****/
+        /* PAGE 4 */
+
+        /* Color Theme Swatches in Hex */
+        .My-Color-Theme-1-hex { color: #FF4A01; }
+        .My-Color-Theme-1bis-hex { color: #ffa784; }
+        .My-Color-Theme-2-hex { color: #2364FF; }
+        .My-Color-Theme-3-hex { color: #0d2d75; }
+        .My-Color-Theme-4-hex { color: #D3DAF0; }
+        .My-Color-Theme-5-hex { color: #FAF5EA; }
+
+        /* Color Theme Swatches in RGBA */
+        /* .My-Color-Theme-1-rgba { color: rgba(255, 74, 1, 1); }
+        .My-Color-Theme-3-rgba { color: rgba(35, 100, 255, 1); }
+        .My-Color-Theme-4-rgba { color: rgba(211, 218, 240, 1); }
+        .My-Color-Theme-5-rgba { color: rgba(250, 245, 234, 1); } */
+
+@font-face {
+    font-family: "DxSitrus-Expanded";
+    src: url("../assets/font/DxSitrus-Expanded.otf") format("woff2");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;  
+    background-color: #FAF5EA; 
+    background-image: url("../assets/documents/grille2PNG.png");
+        /* Full height */
+    height: 100VH; 
+    width: 100%;
+    min-width:500px ;
+        /* Center and scale the image nicely */
+    background-position: center;
+        /* background-repeat: no-repeat; */
+    background-size: cover;
+    cursor: none;
+}
+
+.cursor{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.338);
+    box-sizing: border-box;
+    transition: translate(-50%, -50%);
+    -webkit-transition: translate(-50%, -50%);
+    -moz-transition: translate(-50%, -50%);
+    -ms-transition: translate(-50%, -50%);
+    -o-transition: translate(-50%, -50%);
+    border-radius: 50px 20px 30px 60px;
+    -webkit-border-radius: 50px 20px 30px 60px;
+    -moz-border-radius: 50px 20px 30px 60px;
+    -ms-border-radius: 50px 20px 30px 60px;
+    -o-border-radius: 50px 20px 30px 60px;
+    pointer-events: none;
+    z-index: 100;
+    }
+
+    .link-grow {
+        transform: scale(2);
+        background: rgb(255, 255, 255);
+    }
+    .hovered-link{
+        color: rgb(0, 0, 0);
+    }
+    .cursor + nav:hover{
+        transform: translate(-50%, -50%) scale(8);
+    }
+
+
+/***************************** For rotate (overflow-Y / Scroll) ******************************/ 
+
+.background{
+        /* Full height */
+    height: 100vh; 
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* container parent with transform for scroll x */
+.container{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg) translateX(-100vh);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform-origin: top left;
+    overflow-x: hidden;
+        /*  ie et mozilla */
+    -ms-overlow-style:none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Div child with transform for scroll x */
+.blockH{
+    display: flex;
+    flex-direction: row;
+    width: 800vw;
+    transform: rotate(90deg) translateY(-100vh);
+    -webkit-transform: rotate(90deg) translateY(-100vh);
+    -moz-transform: rotate(90deg) translateY(-100vh);
+    -ms-transform: rotate(90deg) translateY(-100vh);
+    -o-transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+/* container child from .blockH - slides parts */
+
+.one{
+    background:#0d2d75;
+    /* width: 50%; */
+}
+.two{
+    background:linear-gradient(to right,  #0d2d75 0%, #FF4A01 3%);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+.three{
+    background: #D3DAF0; 
+    width: 100%;
+}
+.threeBis{
+    background: #2364FF;
+    width: 100%;
+}
+.four{
+    background: rgb(255,74,1);
+    width: 100%;
+}
+
+/***  Elements (all pages) ***/
+.intro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* border: tan 1px solid; */
+}
+
+
+/**** Part 0 - INTRO  ****/
+/* PAGE 0 */
+
+/* Name/Logo left -> intro */
+.intro>.LV{
+    /* border: #D3DAF0 3px solid; */
+    width: 44vw;
+    position: relative;
+    transform:rotate(-90deg) ;
+    -webkit-transform:rotate(-90deg) ;
+    -moz-transform:rotate(-90deg) ;
+    -ms-transform:rotate(-90deg) ;
+    -o-transform:rotate(-90deg) ;
+    margin: 0 -235px;
+}
+
+/* grille img */
+.intro>.grille{
+    /* border: #e63838 2px solid; */
+    width:44vw;
+    height:44vw;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+} 
+
+/**** (Part 1 - SUMMARY) ****/
+/* PAGE 1 */
+/* Container */
+.containerIntro{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+}
+.flash{
+    width: 80%;
+}
+    /* Top */
+/* Big text - Left */
+
+.introFont {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: absolute;
+    left: 950px;
+    bottom: 0;
+}
+/* Orange square - Right  */
+.squareRight{
+    width: 300px;
+    height: 300px;
+    background: #FF4A01;
+    border: white 1px solid;
+    /* box-shadow: black 50px 50px; */
+}
+
+
+    /* Bottom */
+/* Div child - Box text on the - Left  */
+.introTxt{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#ffa784;
+    line-height: 1.5;
+    width: 112%;
+    height: 35%;
+    order: 1;
+    padding: 61px;
+    display: flex;
+    margin: 477px 0 56px 10px;
+    z-index: 10;
+    background-image: url(assets/documents/flash.png);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+
+/* Div child - Box text - Right */
+.containerSummary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    width: 104%;
+    line-height: 0;
+    order: 2;
+    transform: rotate3d(1, 1, 1, 86deg);
+    transition: transform 2s ease-in;
+    -webkit-transform: rotate3d(1, 1, 1, 86deg);
+    -moz-transform: rotate3d(1, 1, 1, 86deg);
+    -ms-transform: rotate3d(1, 1, 1, 86deg);
+    -o-transform: rotate3d(1, 1, 1, 86deg);
+    -webkit-transition: transform 2s ease-in;
+    -moz-transition: transform 2s ease-in;
+    -ms-transition: transform 2s ease-in;
+    -o-transition: transform 2s ease-in;
+}
+/* All Block text in rotation with hover */
+.containerSummary:hover{
+    transform: rotate3d(1, 1, 1, 360deg);
+    -webkit-transform: rotate3d(1, 1, 1, 360deg);
+    -moz-transform: rotate3d(1, 1, 1, 360deg);
+    -ms-transform: rotate3d(1, 1, 1, 360deg);
+    -o-transform: rotate3d(1, 1, 1, 360deg);
+}
+img:hover{
+    color: black;
+}
+.containerSummary>.summary{
+    width: 2vw;
+    margin: -12px;
+    padding-top: -300px;
+    transform: scale(16);
+    text-align: center;
+}
+
+
+/**** Part 2 - IMG  ****/
+/* PAGE 2 */
+
+/**** Part 3 - AUDIO  ****/
+/* PAGE 3 */
+
+/**** Part 4 - CONTACT  ****/
+/* PAGE 4 */
+
+/*****************************  try something ******************************/
+
+/** text **/
+/* ROTATE SKEW */
+/* h1{
+    color: #2364FF;
+    padding: 50px;
+    font-size: 7rem;
+    font-family: DxSitrus-Expanded ;
+    letter-spacing: 50px;
+    padding: 10px;
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+} */
